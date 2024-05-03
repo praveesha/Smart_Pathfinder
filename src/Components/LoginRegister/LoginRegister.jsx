@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import './Register.css'; // Import CSS file for styling
 
 const LoginRegister = () => {
@@ -17,10 +18,17 @@ const LoginRegister = () => {
             <div className="inputs">
                 {/* Name Input */}
                 <div className="input">
-                    <label htmlFor="name">  Name:  </label> <br />
-                    <input type="text" id="name" name="name" />
+                    <label htmlFor="fname">First Name:  </label> <br />
+                    <input type="text" id="fname" name="fname" />
                     <br /><br />
                 </div>
+
+                <div className="input">
+                    <label htmlFor="lname">Last Name:  </label> <br />
+                    <input type="text" id="lname" name="lname" />
+                    <br /><br />
+                </div>
+
 
                 {/* NIC Input */}
                 <div className="input">
@@ -69,7 +77,7 @@ const LoginRegister = () => {
                 <div className="submit" onClick={()=>{setAction("Submit")}}>Submit</div>
             </div>
         </div>
-    );
+    )
 }
 
 export default LoginRegister;
