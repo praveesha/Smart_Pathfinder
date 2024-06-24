@@ -1,0 +1,30 @@
+.table-body{
+  min-height: 110vh;
+  margin-top: 180px;
+}
+.user-table {
+  margin-top: 20px; /* Adjust margin as needed */
+  padding-bottom: 20px; /* Add padding at the bottom */
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem; /* Adjust margin if necessary */
+  background-color: transparent;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6; /* Adjust border color and style */
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; /* Adjust border color and style */
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6; /* Adjust border color and style */
+}

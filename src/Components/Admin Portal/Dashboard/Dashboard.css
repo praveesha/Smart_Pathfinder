@@ -1,0 +1,62 @@
+
+.dashboard-content {
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.dashboard-heading{
+    padding-bottom: 30px;
+}
+
+.custom-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px gold;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .custom-card {
+        margin-bottom: 20px;
+    }
+}
+
+.btn-purple {
+    color: #ffffff;
+    background-color: #793986; /* Purple color */
+    border-color: #793986; /* Matching border color */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.btn-purple:hover {
+    background-color: #a040a0; /* Darker shade of purple on hover */
+    border-color: #a040a0;
+    transform: rotate(-2deg); /* Apply a slight rotation on hover */
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+.btn-purple.wiggle:hover {
+    animation: wiggle 0.4s ease-in-out infinite;
+}

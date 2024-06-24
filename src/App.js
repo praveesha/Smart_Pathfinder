@@ -1,21 +1,38 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Topbar from './Components/Admin Portal/Commmons/Topbar';
+import Titlebar from './Components/TitleBar/TitleBar';
+import Dashboard from './Components/Admin Portal/Dashboard/Dashboard';
+import LoginRegister from './Components/LoginRegister/LoginRegister';
+import SubmittedFormsTable from './Components/Table/Table';
+import Faq from './Components/Admin Portal/FAQ/FAQ';
 import Hero from './Components/Hero/Hero';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
-import LoginRegister from './Components/LoginRegister/LoginRegister';
 
 function App() {
+  const location = useLocation();
+
+  const displayTitlebar = location.pathname === '/' || location.pathname === '/admin-login';
+
   return (
-    <div>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Hero} /> {/* Route for the home page */}
-          <Route path="/adminLogin" component={AdminLogin} /> 
-          <Route path="/adminRegister" component={LoginRegister} />
-        </Switch>
-      </Router>
+    <div className='app'>
+      <main className='main-content'>
+      {displayTitlebar ? (
+          <Titlebar />
+        ) : (
+          <Topbar />
+        )}
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/admin-login' element={<AdminLogin />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/visitor-registration' element={<LoginRegister />} />
+          <Route path='/visitor-history' element={<SubmittedFormsTable />} />
+          <Route path='/how-to-use' element={<Faq />} />
+        </Routes>
+      </main>
     </div>
   );
 }

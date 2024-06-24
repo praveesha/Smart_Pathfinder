@@ -1,28 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './TitleBar.css';
-import logo from '../Assests/logo.png'; // Corrected the spelling of "Assets"
+import logo from '../Assests/logo.png';
 
 const Titlebar = () => {
-  return (
-    <nav className='container'>
-      <Link to="/">
-        <img src={logo} alt="UoM Logo" />
-      </Link>
-      <ul>
-        <li>
-          <Link to="/adminLogin">
-            <button className='btn'>Admin Login</button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/loginRegister">
-            <button className='btn'>Admin Sign in</button>
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  );
+    const location = useLocation();
+
+    // Determine button text and link based on the current route
+    const buttonText = location.pathname === '/admin-login' ? 'Back to Home' : 'Admin Login';
+    const buttonLink = location.pathname === '/admin-login' ? '/' : '/admin-login';
+
+    return (
+        <nav>
+            <Link to="/">
+                <img className='logo' src={logo} alt="UoM Logo" />
+            </Link>
+            <ul>
+                <li className="title-bar-btn-container">
+                    <Link to={buttonLink} style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <button className='title-bar-btn'>{buttonText}</button>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
+    );
 };
 
 export default Titlebar;
