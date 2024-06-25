@@ -1,15 +1,20 @@
 .table-body{
-  min-height: 110vh;
+  min-height: 100vh;
   margin-top: 180px;
 }
+.searchBar {
+  width: 300px;
+  margin-left: 68px;
+  border-radius: 40%;
+}
 .user-table {
-  margin-top: 20px; /* Adjust margin as needed */
-  padding-bottom: 20px; /* Add padding at the bottom */
+  margin-top: 20px; 
+  padding-bottom: 60px; 
 }
 
 .table {
   width: 100%;
-  margin-bottom: 1rem; /* Adjust margin if necessary */
+  margin-bottom: 1rem;
   background-color: transparent;
 }
 
@@ -17,14 +22,18 @@
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6; /* Adjust border color and style */
+  border-top: 1px solid #dee2e6;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6; /* Adjust border color and style */
+  border-bottom: 2px solid #dee2e6;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6; /* Adjust border color and style */
+  border-top: 2px solid #dee2e6;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
 }
