@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Register.css';
-import Topbar from "../Admin Portal/Commmons/Topbar";
 
 const LoginRegister = () => {
     const [formData, setFormData] = useState({
+        rfid: '',
         fname: '',
         lname: '',
         nic: '',
@@ -44,8 +44,10 @@ const LoginRegister = () => {
         if (Object.keys(newErrors).length === 0) {
             // No errors, submit the form
             console.log("Form submitted", formData);
+            alert("Form submitted successfully!");
             setSubmitted(true);
             // Optionally, send the form data to a backend server
+            window.location.reload();
         } else {
             setErrors(newErrors);
         }
@@ -61,11 +63,11 @@ const LoginRegister = () => {
             <form onSubmit={handleSubmit} className="w-100">
                 <div className="inputs">
                 <div className="form-group input">
-                        <label htmlFor="rfid-id">RFID Card ID:</label>
+                        <label htmlFor="rfid">RFID Card ID:</label>
                         <input
-                            type="number"
-                            id="rfid-id"
-                            name="rfid-id"
+                            type="text"
+                            id="rfid"
+                            name="rfid"
                             className="form-control"
                             value={formData.rfid}
                             onChange={handleChange}
@@ -154,7 +156,7 @@ const LoginRegister = () => {
                         </select>
                     </div>
 
-                    <div className="form-group inputadd">
+                    <div className="form-group input">
                         <label htmlFor="purpose">Purpose of entering the UoM premises:</label>
                         <textarea
                             id="purpose"
@@ -173,7 +175,7 @@ const LoginRegister = () => {
                 </div>
             </form>
 
-            {submitted && <div className="alert alert-success">Form submitted successfully!</div>}
+            
         
         </div>
         </div>
