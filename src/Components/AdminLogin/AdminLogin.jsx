@@ -8,6 +8,7 @@ import LockIcon from '@mui/icons-material/Lock';
 const AdminLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [invalidLogin, setInvalidLogin] = useState("");
     const navigate = useNavigate();
 
     const handleLogin = () => {
@@ -15,7 +16,9 @@ const AdminLogin = () => {
         if (username === "adminFIT" && password === "password") {
             navigate('/dashboard');
         } else {
-            alert("Invalid credentials");
+            setUsername("");
+            setPassword("");
+            setInvalidLogin("Invalid Login credentials. Please try again!");
         }
     };
 
@@ -49,8 +52,13 @@ const AdminLogin = () => {
                     />
                 </div>
             </div>
-            <div className="ad-log-submit-container">
-                <div className="ad-log-submit" onClick={handleLogin}>Login</div>
+            {invalidLogin && (
+                <div className="invalid-login">
+                    {invalidLogin}
+                </div>
+            )}
+            <div className="submit-container">
+                <div className="submit" onClick={handleLogin}>Login</div>
             </div>
         </div>
     );
