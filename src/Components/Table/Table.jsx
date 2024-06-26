@@ -60,7 +60,7 @@ const SubmittedFormsTable = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="form-control mb-3"
+          className="form-control mb-3 search-bar"
           value={searchQuery}
           onChange={handleSearchChange}
         />
@@ -103,7 +103,7 @@ const SubmittedFormsTable = () => {
         </table>
         {displayedForms.length < filteredForms.length && (
           <div className="text-center mt-3">
-            <button className="btn btn-primary" onClick={handleLoadMore}>Load More</button>
+            <button className="btn btn-primary load-more" onClick={handleLoadMore}>Load More</button>
           </div>
         )}
       </div>

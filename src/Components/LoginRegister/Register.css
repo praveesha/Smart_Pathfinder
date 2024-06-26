@@ -91,6 +91,7 @@
     height: 59px;
     color: #fff;
     background: #4c00b4;
+    border-color: #4c00b4;
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
@@ -99,6 +100,7 @@
 
 .submit:hover {
     background-color: #7e57c2;
+    border-color: #7e57c2;
 }
 
 .text-danger {

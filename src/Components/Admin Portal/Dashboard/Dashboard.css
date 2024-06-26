@@ -1,10 +1,10 @@
-
 .dashboard-content {
     margin-top: 100px;
     padding: 30px;
+    padding-bottom: 100px;
 }
 
-.dashboard-heading{
+.dashboard-heading {
     padding-bottom: 30px;
 }
 
@@ -25,6 +25,31 @@
     margin-bottom: 10px;
 }
 
+.topic {
+    margin: 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.topic-font {
+    font-weight: 600;
+}
+.stats{
+    justify-content: center;
+}
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgb(0, 187, 255);
+    transition: box-shadow 0.3s ease-in-out;    margin: 30px;
+    padding-bottom: 0;
+    height: 90%;
+}
+
 @media (max-width: 600px) {
     .custom-card {
         margin-bottom: 20px;
@@ -33,16 +58,16 @@
 
 .btn-purple {
     color: #ffffff;
-    background-color: #793986; /* Purple color */
-    border-color: #793986; /* Matching border color */
+    background-color: #793986; 
+    border-color: #793986; 
     transition: transform 0.3s ease-in-out;
     border-radius: 20px;
 }
 
 .btn-purple:hover {
-    background-color: #a040a0; /* Darker shade of purple on hover */
+    background-color: #a040a0; 
     border-color: #a040a0;
-    transform: rotate(-2deg); /* Apply a slight rotation on hover */
+    transform: rotate(-2deg); 
 }
 
 @keyframes wiggle {

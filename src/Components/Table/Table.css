@@ -5,7 +5,10 @@
 .searchBar {
   width: 300px;
   margin-left: 68px;
-  border-radius: 40%;
+}
+.search-bar{
+  border-radius: 20px;
+  padding-left: 20px;
 }
 .user-table {
   margin-top: 20px; 
@@ -36,4 +39,14 @@
 .highlight {
   background-color: yellow;
   font-weight: bold;
+}
+.load-more {
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    border-color: #4c00b4;
+}
+.load-more:hover {
+  background-color: #7e57c2;
+  border-color: #7e57c2;
 }
