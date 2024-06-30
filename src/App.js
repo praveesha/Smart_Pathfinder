@@ -10,11 +10,12 @@ import SubmittedFormsTable from './Components/Table/Table';
 import Faq from './Components/Admin Portal/FAQ/FAQ';
 import Hero from './Components/Hero/Hero';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
+import User from './Components/User/User';
 
 function App() {
   const location = useLocation();
 
-  const displayTitlebar = location.pathname === '/' || location.pathname === '/admin-login';
+  const displayTitlebar = location.pathname === '/' || location.pathname === '/admin-login' || location.pathname === '/user-portal';
 
   return (
     <div className='app'>
@@ -31,6 +32,7 @@ function App() {
           <Route path='/visitor-registration' element={<LoginRegister />} />
           <Route path='/visitor-history' element={<SubmittedFormsTable />} />
           <Route path='/how-to-use' element={<Faq />} />
+          <Route path='/user-portal' element={<User />} />
         </Routes>
       </main>
     </div>

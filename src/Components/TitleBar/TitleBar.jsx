@@ -7,12 +7,12 @@ const Titlebar = () => {
     const location = useLocation();
 
     // Determine button text and link based on the current route
-    const buttonText = location.pathname === '/admin-login' ? 'Back to Home' : 'Admin Login';
-    const buttonLink = location.pathname === '/admin-login' ? '/' : '/admin-login';
+    const buttonText = location.pathname === '/admin-login' || '/user-portal' ? 'Back to Home' : 'Admin Login';
+    const buttonLink = location.pathname === '/admin-login' || '/user-portal' ? '/' : '/admin-login';
 
     return (
         <nav>
-            <Link to="/">
+            <Link to="/user-portal">
                 <img className='logo' src={logo} alt="UoM Logo" />
             </Link>
             <ul>
