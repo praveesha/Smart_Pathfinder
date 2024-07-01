@@ -140,7 +140,7 @@ const LoginRegister = () => {
                     </div>
 
                     <div className="form-group input">
-                        <label htmlFor="destination">Destination:</label>
+                        <label htmlFor="destination">Main Destination:</label>
                         <select
                             id="destination"
                             name="destination"
@@ -151,10 +151,29 @@ const LoginRegister = () => {
                             <option value="gymnasium">Gymnasium</option>
                             <option value="faculty">Faculty of IT</option>
                             <option value="lagaan">Lagaan</option>
-                            <option value="medical">Medical Center</option>
+                            <option value="wala">Wala Canteen</option>
                             <option value="sentra">Sentra Court</option>
                         </select>
                     </div>
+
+                    {formData.destination === 'faculty' && (
+                            <div className="form-group input">
+                                <label htmlFor="subDestination">Sub Destination:</label>
+                                <select
+                                    id="subDestination"
+                                    name="subDestination"
+                                    className="form-control"
+                                    value={formData.subDestination}
+                                    onChange={handleChange}
+                                >
+                                    <option value="deanOffice">Dean's Office</option>
+                                    <option value="ids">IDS Department</option>
+                                    <option value="itd">IT Department</option>
+                                    <option value="cm">CM Department</option>
+                                    <option value="erp">ERP Lab</option>
+                                </select>
+                            </div>
+                        )}
 
                     <div className="form-group input">
                         <label htmlFor="purpose">Purpose of entering the UoM premises:</label>
