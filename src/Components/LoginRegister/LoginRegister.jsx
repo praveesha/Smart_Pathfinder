@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Register.css';
 
@@ -55,8 +56,13 @@ const LoginRegister = () => {
 
     return (
         <div className="visitor-reg-body">
+            <div className="go-back-container">
+                <Link to='/visitor-registration' style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <button className='newVisitorBtn'>Go Back</button>
+                </Link>            
+            </div>
         <div className="container mt-5 regContainer">
-            <div className="regeader">
+            <div className="regheader">
                 <div className="text">Visitor Registration</div>
                 <div className="underline"></div>
             </div>

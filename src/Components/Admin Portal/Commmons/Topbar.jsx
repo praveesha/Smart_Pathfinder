@@ -7,8 +7,8 @@ import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 
 const Topbar = () => {
   const user = {
-    name: 'AdminFIT',
-    department: 'Faculty of IT',
+    name: 'Admin',
+    department: 'University of Moratuwa',
   };
 
   return (
