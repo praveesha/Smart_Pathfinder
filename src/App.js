@@ -11,6 +11,7 @@ import Faq from './Components/Admin Portal/FAQ/FAQ';
 import Hero from './Components/Hero/Hero';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
 import User from './Components/User/User';
+import AddMap from './Components/Admin Portal/AddMap/AddMap';
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
           <Route path='/visitor-history' element={<SubmittedFormsTable />} />
           <Route path='/how-to-use' element={<Faq />} />
           <Route path='/user-portal' element={<User />} />
+          <Route path='/add-map' element={<AddMap />} />
         </Routes>
       </main>
     </div>

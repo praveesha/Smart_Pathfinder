@@ -7,8 +7,8 @@ const Titlebar = () => {
     const location = useLocation();
 
     // Determine button text and link based on the current route
-    const buttonText = location.pathname === '/admin-login' || '/user-portal' ? 'Back to Home' : 'Admin Login';
-    const buttonLink = location.pathname === '/admin-login' || '/user-portal' ? '/' : '/admin-login';
+    const buttonText = location.pathname === '/' ? 'Admin Login' : 'Back to Home';
+    const buttonLink = location.pathname === '/'  ? '/admin-login' : '/';
 
     return (
         <nav>
